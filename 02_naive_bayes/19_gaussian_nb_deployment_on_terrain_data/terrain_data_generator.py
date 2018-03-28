@@ -25,7 +25,7 @@ def generateTerrainData(total_points = 1000):
     splitIdx = int(0.75 * total_points)
     features_train = features[0:splitIdx]
     features_test = features[splitIdx:]
-    labels_train = y[0:splitIdx]
-    labels_test = y[splitIdx:]
+    labels_train = labels[0:splitIdx]
+    labels_test = labels[splitIdx:]
 
     return features_train, labels_train, features_test, labels_test
