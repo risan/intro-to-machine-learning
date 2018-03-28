@@ -55,7 +55,7 @@ from plot import predictAndPlot
 predictAndPlot(classifier, features_test, labels_test)
 ```
 
-![Decision Boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/02_naive_bayes/19_gaussian_nb_deployment_on_terrain_data/scatter_plot.pngp)
+![Decision Boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/02_naive_bayes/19_gaussian_nb_deployment_on_terrain_data/scatter_plot.png)
 
 ## Python Tips and Tricks
 

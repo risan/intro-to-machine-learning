@@ -15,4 +15,4 @@ In order to run the sample codes, you'll need the following packages:
 ## Chapters
 
 * [Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes)
-    * [GaussianNB Deployment on Terrain Data](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/19_gaussian_nb_deployment_on_terrain_data)
+    * [GaussianNB Deployment on Terrain Data](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/19_gaussian_nb_deployment_on_terrain_data#readme)
