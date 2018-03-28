@@ -1,6 +1,6 @@
 # Intro to Machine Learning
 
-My codes and notes on Udacity course [Intro to Machine Learning](https://eu.udacity.com/course/intro-to-machine-learning--ud120).
+Codes and notes from Udacity [Intro to Machine Learning](https://eu.udacity.com/course/intro-to-machine-learning--ud120) course.
 
 ## Requirements
 
