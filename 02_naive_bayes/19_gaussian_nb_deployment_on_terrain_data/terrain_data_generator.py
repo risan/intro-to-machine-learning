@@ -8,24 +8,24 @@ def generateTerrainData(total_points = 1000):
     """
     random.seed(42) # Initialize internal state of random generator.
 
-    # Generate random data.
+    # Generate random features.
     gradePoints = [random.random() for i in range(0, total_points)]
     bumpyPoints = [random.random() for i in range(0, total_points)]
-    x = [[grade, bumpy] for grade,bumpy in zip(gradePoints, bumpyPoints)]
+    features = [[grade, bumpy] for grade,bumpy in zip(gradePoints, bumpyPoints)]
 
-    # Generate random output
+    # Generate random labels.
     errorPoints = [random.random() for i in range(0, total_points)]
-    y = [round((gradePoints[i] * bumpyPoints[i]) + 0.3 + (0.1 * errorPoints[i])) for i in range(0, total_points)]
+    labels = [round((gradePoints[i] * bumpyPoints[i]) + 0.3 + (0.1 * errorPoints[i])) for i in range(0, total_points)]
 
     for i in range(0, total_points):
         if gradePoints[i] > 0.8 or bumpyPoints[i] > 0.8:
-            y[i] = 1.0
+            labels[i] = 1.0
 
     # Split for training and testing.
     splitIdx = int(0.75 * total_points)
-    x_train = x[0:splitIdx]
-    x_test = x[splitIdx:]
-    y_train = y[0:splitIdx]
-    y_test = y[splitIdx:]
+    features_train = features[0:splitIdx]
+    features_test = features[splitIdx:]
+    labels_train = y[0:splitIdx]
+    labels_test = y[splitIdx:]
 
-    return x_train, y_train, x_test, y_test
+    return features_train, labels_train, features_test, labels_test
