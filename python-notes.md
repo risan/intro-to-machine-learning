@@ -11,13 +11,13 @@ I rarely use Python before. Here are new things I've discovered on Python while 
 * [Working with Pathname](#working-with-pathname)
     * [Get Filename From URL](#get-filename-from-url)
     * [Check if File Exists](#check-if-file-exists)
-    * [Create a Directory if It's Not Exists](#create-a-directory-if-it-s-not-exists)
+    * [Create a Directory if It's Not Exists](#create-a-directory-if-its-not-exists)
 * [Working with Files](#working-with-files)
     * [Downloading File](#downloading-file)
     * [Extracting Tar File](#extracting-tar-file)
 * [Working with List](#working-with-list)
     * [Generate a List of Random Numbers](#generate-a-list-of-random-numbers)
-    * [Pair Values from Two List](#pair-values-from-two-list)
+    * [Pair Values from Two Lists](#pair-values-from-two-lists)
     * [Splitting a List](#splitting-a-list)
     * [Filtering List In One Line](#filtering-list-in-one-line)
 
@@ -96,7 +96,7 @@ except OSError, e:
         raise
 ```
 
-## Working with File
+## Working with Files
 
 ### Downloading File
 

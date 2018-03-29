@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-* [Bayes Rules](#Bayes Rules)
+* [Bayes Rules](#bayes-rules)
     * [The Cancer Case](#the-cancer-case)
         * [Prior Probability](#prior-probability)
         * [The Test Evidence](#the-test-evidence)
@@ -19,7 +19,7 @@
     * [Terrain Classifier Result](#terrain-classifier-result)
 * [Calculating Classifier Accuracy](#calculating-classifier-accuracy)
     * [With One Liner List Filter](#with-one-liner-list-filter)
-    * [With Basic For..In Loop](#with-basic-for--in-loop)
+    * [With Basic For..In Loop](#with-basic-forin-loop)
     * [With Reduce Function](#with-reduce-function)
     * [Using accuracy_score](#using-accuracy_score)
     * [Using score Method](#using-score-method)
