@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pylab as pl
 
-def predictAndPlot(classifier, features_test, labels_test):
+def predict_and_plot(classifier, features_test, labels_test):
     """Predict the output labels and plot both the test points and decision boundary.
 
     :param obj classifier: The classifier instance

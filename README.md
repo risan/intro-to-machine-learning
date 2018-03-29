@@ -15,8 +15,9 @@ In order to run the sample codes, you'll need the following packages:
 
 ## Chapters
 
-* [Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes)
-    * [GaussianNB Deployment on Terrain Data](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/19_gaussian_nb_deployment_on_terrain_data#readme)
-    * [Calculating Naive Bayes Accuracy](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/20_calculating_nb_accuracy#readme)
-    * [Bayes Rules](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/23_bayes_rules#readme)
-    * [Email Author Prediction with Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/02_naive_bayes/42_author_id_accuracy#readme)
+* [Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/naive_bayes#readme)
+
+## New Things I Learned
+
+* [Python Notes](https://github.com/risan/intro-to-machine-learning/tree/master/python-notes.md)
+* [Scikit and SciPy Notes](https://github.com/risan/intro-to-machine-learning/tree/master/scikit-and-scipy-notes.md)

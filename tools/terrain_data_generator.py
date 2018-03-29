@@ -1,6 +1,6 @@
 import random
 
-def generateTerrainData(total_points = 1000):
+def generate_terrain_data(total_points = 1000):
     """Generate a random terrain data.
 
     :param int total_points: Total data points to generate, default to 1000
