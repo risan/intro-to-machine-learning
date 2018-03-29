@@ -1,4 +1,4 @@
-# Predict the Email Author with Naive Bayes
+# Email Author Prediction with Naive Bayes
 
 The result of predicting email author using Gaussian Naive Bayes.
 
