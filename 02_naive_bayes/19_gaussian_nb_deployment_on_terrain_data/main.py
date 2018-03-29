@@ -9,6 +9,8 @@ from plot import predictAndPlot
 # Generate a random terrain data.
 features_train, labels_train, features_test, labels_test = generateTerrainData()
 
+# Train the classifier.
 classifier = trainClassifier(features_train, labels_train)
 
+# Predict the labels and plot the result.
 predictAndPlot(classifier, features_test, labels_test)

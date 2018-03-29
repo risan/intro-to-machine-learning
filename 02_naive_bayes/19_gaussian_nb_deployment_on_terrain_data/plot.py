@@ -3,6 +3,12 @@ import matplotlib.pyplot as plt
 import pylab as pl
 
 def predictAndPlot(classifier, features_test, labels_test):
+    """Predict the output labels and plot both the test points and decision boundary.
+
+    :param obj classifier: The classifier instance
+    :param list features_test: The features to predict
+    :param list labels_test: The actual labels
+    """
     x_min = 0.0
     x_max = 1.0
     y_min = 0.0

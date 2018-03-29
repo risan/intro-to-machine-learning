@@ -1,10 +1,12 @@
 import random
 
 def generateTerrainData(total_points = 1000):
-    """Generate a random terrain data.
+    """Create and train Gaussian Naive Bayes classifier.
 
-    Keyword arguments:
-    total_points -- total points to generate (default 1000)
+    :param list features_train: The features input for training
+    :param list labels_train: The labels output for training
+    :return: The GaussianNB classifier instance
+    :rtype: sklearn.naive_bayes.GaussianNB
     """
     random.seed(42) # Initialize internal state of random generator.
 

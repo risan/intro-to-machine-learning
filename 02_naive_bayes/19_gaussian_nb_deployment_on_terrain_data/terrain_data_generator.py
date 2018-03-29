@@ -3,8 +3,8 @@ import random
 def generateTerrainData(total_points = 1000):
     """Generate a random terrain data.
 
-    Keyword arguments:
-    total_points -- total points to generate (default 1000)
+    :param int total_points: Total data points to generate, default to 1000
+    :return: 4 lists consisting data points for features_train, labels_train, features_test, and labels_test
     """
     random.seed(42) # Initialize internal state of random generator.
 
