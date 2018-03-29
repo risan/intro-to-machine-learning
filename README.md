@@ -11,6 +11,7 @@ In order to run the sample codes, you'll need the following packages:
 * [NumPy](http://www.numpy.org)
 * [scikit-learn](http://scikit-learn.org)
 * [matplotlib](https://matplotlib.org)
+* [nltk](https://www.nltk.org)
 
 ## Chapters
 

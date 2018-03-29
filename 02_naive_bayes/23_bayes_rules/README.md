@@ -196,6 +196,8 @@ P(S|love deal) = Joint P(S|love deal) / normalizer
 
 Naive Bayes is simple to use and efficient. We can feed it with thousands even hundred thousands of features.
 
+Naive Bayes is a very good for text classification. When dealing with text, it's very common to treat each word as a feature; thus we'll ended up with bunch of features—and Naive Bayes really efficient in handling a big set of features.
+
 However it can break in a funny way. Historically when Google first started out, people searched for "Chicago Bulls" would ended up getting an image of bulls and Chicago city. Naive Bayes does not consider the word order, thus can't handle phrases with multiple words and totally have different meaning.
 
 > It's called "Naive" because it simply calculate the word frequencies without considering the word order.
