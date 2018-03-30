@@ -57,3 +57,11 @@ The startup script will also check for all of the required modules. The Enron da
 
 * [Python Notes](https://github.com/risan/intro-to-machine-learning/tree/master/python-notes.md)
 * [Scikit and SciPy Notes](https://github.com/risan/intro-to-machine-learning/tree/master/scikit-and-scipy-notes.md)
+
+## License
+
+CC BY-NC-ND 4.0 · [Risan Bagja Pradana](https://risan.io)
+
+## Legal
+
+This repository is in no way affiliated with, authorized, maintained, sponsored or endorsed by [Udacity](https://eu.udacity.com) or any of its affiliates or subsidiaries. This is an independent and unofficial library.
