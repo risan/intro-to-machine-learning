@@ -39,7 +39,7 @@ P(C) = 0.01
 
 #### The Test Evidence
 
-There are two branches of events here: **WITH CANCER** and **WITHOUT CANCER**. And suppose there's a cancer test that can be conducted with two possible result: **POSITIVE** and **NEGATIVE**.
+There are two branches of events here: **WITH CANCER** and **WITHOUT CANCER**. And suppose there's a cancer test that can be conducted with two possible results: **POSITIVE** and **NEGATIVE**.
 
 Given a person **with cancer**, he/she has the probability of 90% to get a **positive** cancer test result. This is also called the **test sensitivity**:
 
@@ -61,7 +61,7 @@ P(pos|Cnot) = 0.1
 
 #### The Posterior Probability
 
-Now the qustion is, what is the probability of people to get a cancer given a positive test result?
+Now the question is, what is the probability of people to get a cancer given a positive test result?
 
 To arrive at **posterior probability**, we need both the prior probability and the test evidence.
 
