@@ -8,7 +8,7 @@ Various tools for supporting this project.
 * [The Startup Script](#the-startup-script)
     * [Modules Checker](#modules-checker)
     * [Enron Dataset Downloader](#enron-dataset-downloader)
-* [Terrain Classifier Helpers](#terrain-classifier-helpers)
+* [Terrain Classifier Runner](#terrain-classifier-runner)
     * [Terrain Data Generator](#terrain-data-generator)
     * [Predict and Plot](#predict-and-plot)
 * [Email Classifier Helpers](#email-classifier-helpers)
@@ -77,7 +77,22 @@ from enron_dataset_downloader import download_enron_dataset
 download_enron_dataset("/path/to/data_directory")
 ```
 
-## Terrain Classifier Helpers
+## Terrain Classifier Runner
+
+The `terrain_classifier_runner.py` is module that we can use easily run the various classifier and run it agains the terrain data. It will automatically train the given classifier, calculate the accuracy, predict the test data and plot the result.
+
+All we have to do is pass the `classifier` instance as the first argument. The second `image_path` argument is optional, this the path where you want to save the plot image. The `accuracy_prefix` is also optional, it's the text that you want to display right before the accuracy score.
+
+```py
+from sklearn.naive_bayes import GaussianNB
+from terrain_classifier_runner import run_terrain_classifier
+
+# Create the classifier.
+classifier = GaussianNB()
+
+# Run the classifier.
+run_terrain_classifier(classifier, image_path = "plot.png", accuracy_prefix = "🤖 Accuracy: ")
+```
 
 ### Terrain Data Generator
 

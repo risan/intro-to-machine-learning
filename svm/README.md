@@ -14,6 +14,9 @@
 * It takes an input of data with two categories and create a line that separate these two categories.
 * It find the maximum distance or margin between the line and the nearest point from both of the categories.
 * It puts the correctness of the classification first before trying to maximize the margin.
+* SVM can solve not only the linearly separated classes, but the non-linear classes too.
+* SVM tackle the non-linearly separated classes by using the kernel trick. It transform the low dimensional inputs into a higher dimensional inputs that are linearly separarable.
+* Sklearn provided several built-in kernel that we can use with SVM SVC: `linear`, `poly`, `rbf` (default value), `sigmoid`, `precomputed`.
 
 ## Terrain Classifier with Naive Bayes
 
@@ -37,11 +40,11 @@ clasifier.predict(features_test)
 Type the following command on your terminal to run the terrain classifier:
 
 ```shell
-# Go to the terrain_classifier directory.
-$ cd /path/to/svm/terrain_classifier
+# Go to the project directory.
+$ cd /path/to/intro-to-machine-learning
 
 # And run it with Python
-$ python terrain_classifier.py
+$ python svm/terrain_classifier
 ```
 
 ### Terrain Classifier Result

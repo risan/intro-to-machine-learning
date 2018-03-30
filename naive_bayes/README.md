@@ -23,6 +23,7 @@
     * [With Reduce Function](#with-reduce-function)
     * [Using accuracy_score](#using-accuracy_score)
     * [Using score Method](#using-score-method)
+* [Email Classifier with Naive Bayes](#email-classifier-with-naive-bayes)
 
 ## Bayes Rules
 
@@ -240,11 +241,11 @@ Read more in [GaussianNB documentation](http://scikit-learn.org/stable/modules/g
 Type the following command on your terminal to run the terrain classifier:
 
 ```shell
-# Go to the terrain_classifier directory.
-$ cd /path/to/naive_bayes/terrain_classifier
+# Go to the project directory.
+$ cd /path/to/intro-to-machine-learning
 
 # And run it with Python
-$ python terrain_classifier.py
+$ python naive_bayes/terrain_classifier
 ```
 
 ### Terrain Classifier Result
@@ -333,11 +334,11 @@ print("Accuracy: " + str(accuracy))
 Type the following command on your terminal to run the email classifier:
 
 ```shell
-# Go to the email_classifier directory.
-$ cd /path/to/naive_bayes/email_classifier
+# Go to the project directory.
+$ cd /path/to/intro-to-machine-learning
 
 # And run it with Python
-$ python email_classifier.py
+$ python naive_bayes/email_classifier
 ```
 
 The result of using Gaussian Naive Bayes classifier to predict the email's author.

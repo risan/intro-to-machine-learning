@@ -23,6 +23,17 @@ I rarely use Python before. Here are new things I've discovered on Python while 
 
 ## Modules Classes and Functions
 
+### Main Entry File
+
+Suppose our Python project is stored in `/foo/bar` directory. And this application has one file that servers as the single entry point. We can name this file `__main__.py` so we can run this project simply be referencing it's directory path:
+
+```py
+$ python /foo/bar
+
+# It's equivalent to this
+$ python /foo/bar/__main__.py
+```
+
 ### Import Python Module Dynamically
 
 We can dynamically import a Python module using the [`__import__`](https://docs.python.org/2/library/functions.html#__import__) function:
