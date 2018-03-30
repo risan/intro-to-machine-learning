@@ -4,7 +4,7 @@ def generate_terrain_data(total_points = 1000):
     """Generate a random terrain data.
 
     :param int total_points: Total data points to generate, default to 1000
-    :return: 4 lists consisting data points for features_train, labels_train, features_test, and labels_test
+    :return: 4 lists consisting data points for features_train, features_test, labels_train, and labels_test
     """
     random.seed(42) # Initialize internal state of random generator.
 
@@ -28,4 +28,4 @@ def generate_terrain_data(total_points = 1000):
     labels_train = labels[0:splitIdx]
     labels_test = labels[splitIdx:]
 
-    return features_train, labels_train, features_test, labels_test
+    return features_train, features_test, labels_train, labels_test

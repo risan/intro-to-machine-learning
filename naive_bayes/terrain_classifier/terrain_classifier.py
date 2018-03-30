@@ -9,7 +9,7 @@ from terrain_data_generator import generate_terrain_data
 from plot import predict_and_plot
 
 # Generate a random terrain data.
-features_train, labels_train, features_test, labels_test = generate_terrain_data()
+features_train, features_test, labels_train, labels_test = generate_terrain_data()
 
 # Create and train the classifier.
 classifier = GaussianNB()
