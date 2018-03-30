@@ -51,6 +51,7 @@ The startup script will also check for all of the required modules. The Enron da
 ## Chapters
 
 * [Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/naive_bayes#readme)
+* [Support Vector Machine](https://github.com/risan/intro-to-machine-learning/tree/master/svm#readme)
 
 ## New Things I Learned
 
