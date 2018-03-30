@@ -1,5 +1,4 @@
 # coding: utf-8
-"""Terrain classifier with SVM"""
 import os
 import sys
 
@@ -10,10 +9,10 @@ tools_path = os.path.abspath(os.path.join(dirname, "../../tools"))
 sys.path.append(tools_path)
 
 from sklearn import svm
-from terrain_classifier_runner import run_terrain_classifier
+from email_classifier_runner import run_email_classifier
 
 # Create the classifier.
-classifier = svm.SVC(kernel = "linear")
+classifier = svm.SVC(kernel = "rbf", C = 10000.0)
 
 # Run the classifier.
-run_terrain_classifier(classifier, os.path.join(dirname, "plot.png"))
+run_email_classifier(classifier)

@@ -165,18 +165,19 @@ plot(classifier, features_test, labels_test, [image_path = None])
 
 ## Email Classifier Runner
 
-The `email_classifier_runner.py` is module that we can use to run the classifier against the email data. It will automatically train the given classifier, predict the output test labels, and calculate the accuracy. It will also count the time it takes in training and prediction phase.
+The `email_classifier_runner.py` is module that we can use to run the classifier against the email data. It will automatically train the given classifier, predict the output test labels, and calculate the accuracy. It will also count the time it takes in training and prediction phase. This function also returns a list of the predicted output labels.
 
 ```py
 from email_classifier_runner import run_email_classifier
 
-run_email_classifier(classifier, [title = None])
+run_email_classifier(classifier, [title = None], [training_data_proportion = 1])
 ```
 
 **Parameters:**
 
 * `classifier`: This is the classifier object that you want to run.
 * `title`: This is the optional text that you want to print before running the classifier.
+* `training_data_proportion`: The proportion of training data to use, default to `1`. Note that this is not the proportion of training data againsts the testing data. But simply the proportion of testing data that will be feed to the classifier. Use the value `< 1` to drop some of the testing data thus speeding up the training and predicting processes.
 
 Usage example:
 
@@ -188,7 +189,7 @@ from email_classifier_runner import run_email_classifier
 classifier = GaussianNB()
 
 # Run the classifier.
-run_email_classifier(classifier)
+labels_prediction = run_email_classifier(classifier)
 ```
 
 ### Email Pre-processor

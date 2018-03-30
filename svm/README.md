@@ -12,6 +12,9 @@
     * [The Gamma Parameter](#the-gamma-parameter)
     * [Playing with SVM Parameters](#playing-with-svm-parameters)
 * [SVM Strengths and Weaknesses](#svm-strengths-and-weaknesses)
+* [Email Classifier with SVM](#email-classifier-with-svm)
+    * [Speeding Up the SVM](#speeding-up-the-svm)
+    * [Using RBF Kernel with Various C Parameter](#using-rbf-kernel-with-various-c-parameter)
 
 ## SVM Summary
 
@@ -140,3 +143,81 @@ gamma: 1000
 * It works really well on a complex domain where there are clear margin of separation.
 * It doesn't work really well when dealing with a large dataset. The training time complexity is quadratic with the number of samples making it hard to scale dealing with more than a couple of 10,000 samples.
 * It doesn't work well with high noise data, where many points from different classes are overlapping each other (Better to use Naive Bayes on this case).
+
+## Email Classifier with SVM
+
+Type the following command on your terminal to run the email classifier:
+
+```shell
+# Go to the project directory.
+$ cd /path/to/intro-to-machine-learning
+
+# And run it with Python
+$ python svm/email_classifier
+```
+
+The result of using SVM classifier with linear kernel to predict the email's author:
+
+```txt
+⏱ Training time: 178.436s
+⏱ Predicting time: 17.618s
+🤖 Accuracy: 0.9840728100113766
+```
+
+### Speeding Up the SVM
+
+With the same email dataset, compared to Gaussian Naive Bayes, SVM took longer to train and predict. To make the process faster, we can cut down the number of testing data.
+
+```txt
+# The result with only 1% of training data.
+⏱ Training time: 0.091s
+⏱ Predicting time: 0.996s
+🤖 Accuracy: 0.8845278725824801
+```
+
+Compared to the previous test, we now only use 1% of testing data. Both the training and predicting times are speeding-up significanly. Yet the accuracy is only drop 0.1, not bad right? The speed of predicting can be essential in a system for detecting credit card fraud or voice recognition like Siri.
+
+### Using RBF Kernel with Various C Parameter
+
+Still with 1% of training data, here are the results of using RBF kernel and various `C` parameter:
+
+```txt
+# C = 1.0 (default)
+⏱ Training time: 0.104s
+⏱ Predicting time: 1.153s
+🤖 Accuracy: 0.6160409556313993
+
+# C = 10.0
+⏱ Training time: 0.108s
+⏱ Predicting time: 1.158s
+🤖 Accuracy: 0.6160409556313993
+
+# C = 100.0
+⏱ Training time: 0.104s
+⏱ Predicting time: 1.277s
+🤖 Accuracy: 0.6160409556313993
+
+# C = 1000.0
+⏱ Training time: 0.116s
+⏱ Predicting time: 1.115s
+🤖 Accuracy: 0.8213879408418657
+
+# C = 10000.0
+⏱ Training time: 0.096s
+⏱ Predicting time: 0.899s
+🤖 Accuracy: 0.8924914675767918
+```
+
+The biggest `C` has the best accuracy, the bigger `C` also means more complex decision boundary. Now with all of the training data incuded:
+
+```txt
+# C = 10000.0
+⏱ Training time: 119.813s
+⏱ Predicting time: 13.032s
+🤖 Accuracy: 0.9908987485779295
+
+👦 Total emails from Chris: 877
+👧 Total emails from Sarah: 881
+```
+
+We have 99% of accuracy! It's amazing, but as you may see both the training and predicting process took times. Working with text document like this, we'd better off using Naive Bayes.

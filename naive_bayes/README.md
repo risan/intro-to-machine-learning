@@ -341,10 +341,10 @@ $ cd /path/to/intro-to-machine-learning
 $ python naive_bayes/email_classifier
 ```
 
-The result of using Gaussian Naive Bayes classifier to predict the email's author.
+The result of using Gaussian Naive Bayes classifier to predict the email's author:
 
 ```txt
-🤖 Accuracy       : 0.9732650739476678
-⏱ Training time  : 1.716s
+🤖 Accuracy: 0.9732650739476678
+⏱ Training time: 1.716s
 ⏱ Predicting time: 0.184s
 ```
