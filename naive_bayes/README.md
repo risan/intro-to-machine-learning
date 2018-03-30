@@ -219,7 +219,7 @@ However it can break in a funny way. Historically when Google first started out,
 
 ### Create and Train a Gaussian Naive Bayes Classifier
 
-With scikit-learn we can easily create and train a Gaussian Naive Bayes classifier:
+With scikit-learn we can easily create and train a [Gaussian Naive Bayes classifier](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html):
 
 ```py
 from sklearn.naive_bayes import GaussianNB
@@ -255,7 +255,7 @@ The result from using the Gaussian Naive Bayes classifier to predict the vehicle
 🤖 Accuracy: 0.884
 ```
 
-![Gaussian Naive Bayes decision boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/naive_bayes/terrain_classifier/scatter_plot.png)
+![Gaussian Naive Bayes decision boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/naive_bayes/terrain_classifier/plot.png)
 
 ## Calculating Classifier Accuracy
 

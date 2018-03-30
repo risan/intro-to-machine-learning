@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pylab as pl
 
-def predict_and_plot(classifier, features_test, labels_test):
+def predict_and_plot(classifier, features_test, labels_test, image_path = None):
     """Predict the output labels and plot both the test points and decision boundary.
 
     :param obj classifier: The classifier instance
@@ -39,8 +39,13 @@ def predict_and_plot(classifier, features_test, labels_test):
     plt.scatter(grade_fast, bumpy_fast, color = "b", label = "fast")
     plt.scatter(grade_slow, bumpy_slow, color = "r", label = "slow")
 
-    # Show the plot
     plt.legend()
     plt.xlabel("grade")
     plt.ylabel("bumpiness")
+
+    # Save the plot to file.
+    if image_path:
+        plt.savefig(image_path)
+
+    # Show the plot
     plt.show()

@@ -25,7 +25,7 @@ I rarely use Python before. Here are new things I've discovered on Python while 
 
 ### Import Python Module Dynamically
 
-We can dynamically import a Python module using the `__import__` function:
+We can dynamically import a Python module using the [`__import__`](https://docs.python.org/2/library/functions.html#__import__) function:
 
 ```py
 module_name = "numpy"
@@ -55,6 +55,8 @@ print("😅")
 ```
 
 ## Working with Pathname
+
+Read the [`os.path` documentation](https://docs.python.org/2/library/os.path.html).
 
 ### Get Filename From URL
 
