@@ -7,6 +7,7 @@ I rarely use Python before. Here are new things I've discovered on Python while 
 * [Modules Classes and Functions](#modules-classes-and-functions)
     * [Import Python Module Dynamically](#import-python-module-dynamically)
     * [Multiple Returns in Python](#multiple-returns-in-python)
+    * [Importing Modules Outside of the Directory](importing-modules-outside-of-the-directory)
 * [Print The Emojis](#print-the-emojis)
 * [Working with Pathname](#working-with-pathname)
     * [Get Filename From URL](#get-filename-from-url)
@@ -53,6 +54,57 @@ def test():
     return 100, "foo"
 
 someNumber, someString = test()
+```
+
+## Importing Modules Outside of the Directory
+
+In order to import modules from outside of the directory, we need to add that module's directory with `sys.path.append`. Suppose we have the following directory structure:
+
+```py
+|--foo
+| |-- bar.py
+|
+|-- tools
+| |-- speak_yoda.py
+```
+
+If we want to use the `speak_yoda.py` module within the `bar.py`, we can do the following:
+
+```py
+# /foo/bar.py
+import os
+
+sys.path.append("../tools")
+
+import speak_yoda
+```
+
+However this won't work if you run the `baz.py` file from outside of its `foo` directory:
+
+```shell
+# Works inside the /foo directory.
+$ cd /foo
+$ python bar.py
+
+# Won't work if it's on its project root directory.
+$ python foo/bar.py
+```
+
+To solve this we can append the `tools` directory using it's absolute path.
+
+```py
+# /foo/bar.py
+import os
+import sys
+
+# Get the directory name for this file.
+current_dirname = os.path.dirname(os.path.realpath(__file__))
+
+# Use the absolute path to the tools directory
+tools_path = os.path.abspath(os.path.join(dirname, "../tools"))
+sys.path.append(tools_path)
+
+import speak_yoda
 ```
 
 ## Print The Emojis
