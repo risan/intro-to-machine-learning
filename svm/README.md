@@ -6,7 +6,7 @@ Support Vector Machine or SVM is one of the supervised learning model.
 
 * [SVM Summary](#svm-summary)
 * [Terrain Classifier with SVM](#terrain-classifier-with-svm)
-    * [Create and Train a Gaussian SVM Classifier](#create-and-train-a-gaussian-svm-classifier)
+    * [Create and Train an SVM Classifier](#create-and-train-an-svm-classifier)
     * [Run the Classifier](#run-the-classifier)
     * [Terrain Classifier Result](#terrain-classifier-result)
 * [SVM Parameters](#svm-parameters)
@@ -45,9 +45,9 @@ Support Vector Machine or SVM is one of the supervised learning model.
 * SVM tackle the non-linearly separated classes by using the kernel trick. It transform the low dimensional inputs into a higher dimensional inputs that are linearly separarable.
 * Sklearn provided several built-in kernel that we can use with SVM SVC: `linear`, `poly`, `rbf` (default value), `sigmoid`, `precomputed`.
 
-## Terrain Classifier with Naive Bayes
+## Terrain Classifier with SVM
 
-### Create and Train a SVM Classifier
+### Create and Train an SVM Classifier
 
 We can use the [SVM classifier](http://scikit-learn.org/stable/modules/svm.html) easily with scikit-learn:
 
