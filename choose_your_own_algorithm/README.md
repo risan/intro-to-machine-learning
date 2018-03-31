@@ -20,7 +20,7 @@ Both Random Forest and AdaBoost are belong to the "ensemble methods"—it's a me
     * [K-Nearest Neighbors Strengths and Weaknesses](#k-nearest-neighbors-strengths-and-weaknesses)
 * [Random Forest](#random-forest)
 * [Terrain Classifier](#terrain-classifier)
-    * [Terrain Classifier with K-Nearest Neighbors](#terrain-classifier-with-k-nearest neighbors)
+    * [Terrain Classifier with K-Nearest Neighbors](#terrain-classifier-with-k-nearest-neighbors)
     * [Terrain Classifier with Random Forest](#terrain-classifier-with-random-forest)
     * [Terrain Classifier with AdaBoost](#terrain-classifier-with-adaboost)
 
@@ -125,7 +125,7 @@ We can pass the `n_neighbors` parameter to specify the number of neighbors to us
 🤖 Accuracy: 0.932
 ```
 
-![K-Nearest Neighbors n_neighbors10](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/choose_your_own_algorithm/terrain_classifier/k_nearest_neighbors/n_neighbors10.png)
+![K-Nearest Neighbors n_neighbors10](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/choose_your_own_algorithm/terrain_classifier/k_nearest_neighbors/n_neighbors_10.png)
 
 There's also the `weight` parameter to specify the function to weight points on neighborhood. The default is `uniform` which means all points on each neighbor are weight equally. There's also `distance` option which mean points on closer neighborhood have more influence compared to the one that far away.
 
