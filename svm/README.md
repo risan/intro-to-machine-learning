@@ -1,5 +1,7 @@
 # Support Vector Machine
 
+Support Vector Machine or SVM is one of the supervised learning model.
+
 ## Table of Contents
 
 * [SVM Summary](#svm-summary)
@@ -18,7 +20,6 @@
 
 ## SVM Summary
 
-* SVM is a supervised learning model.
 * It takes an input of data with two categories and create a line that separate these two categories.
 * It find the maximum distance or margin between the line and the nearest point from both of the categories.
 * It puts the correctness of the classification first before trying to maximize the margin.

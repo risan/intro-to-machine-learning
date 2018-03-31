@@ -1,5 +1,7 @@
 # Naive Bayes
 
+Naive Bayes is one of the supervised learning algorithm. The Naive Bayes classifier uses the Bayes' Theorem with  assumption that each feature is independence from one and antoher—that's why it's called naive.
+
 ## Table of Contents
 
 * [Bayes Rules](#bayes-rules)
