@@ -21,9 +21,27 @@ Support Vector Machine or SVM is one of the supervised learning model.
 ## SVM Summary
 
 * It takes an input of data with two categories and create a line that separate these two categories.
+
+![Separate two classes of data](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/01_choosing_line_to_separate_classes.png)
+
 * It find the maximum distance or margin between the line and the nearest point from both of the categories.
+
+![Choose line with maximum margin](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/02_choosing_line_with_better_margin.png)
+
 * It puts the correctness of the classification first before trying to maximize the margin.
+
+![Correctnesss over the margin](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/03_puts_correctness_before_margin.png)
+
+* It tries it best when dealing with the outlier. Sometime it will give the outlier in order to have a better accuracy.
+
+![Dealing with outlier](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/04_dealing_with_outlier.png)
+
 * SVM can solve not only the linearly separated classes, but the non-linear classes too.
+
+![Non-linear SVM](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/05_non_linear_svm.png)
+
+![Non-linear SVM](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/svm/slides/06_non_linear_svm.png)
+
 * SVM tackle the non-linearly separated classes by using the kernel trick. It transform the low dimensional inputs into a higher dimensional inputs that are linearly separarable.
 * Sklearn provided several built-in kernel that we can use with SVM SVC: `linear`, `poly`, `rbf` (default value), `sigmoid`, `precomputed`.
 
