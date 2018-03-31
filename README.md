@@ -53,7 +53,7 @@ The startup script will also check for all of the required modules. The Enron da
 * [Naive Bayes](https://github.com/risan/intro-to-machine-learning/tree/master/naive_bayes#readme)
 * [Support Vector Machine](https://github.com/risan/intro-to-machine-learning/tree/master/svm#readme)
 * [Decision Tree](https://github.com/risan/intro-to-machine-learning/tree/master/decision_tree#readme)
-* [Choose Your Own Algorithm](#https://github.com/risan/intro-to-machine-learning/tree/master/choose_your_own_algorithm)
+* [Choose Your Own Algorithm](https://github.com/risan/intro-to-machine-learning/tree/master/choose_your_own_algorithm)
 
 ## New Things I Learned
 
