@@ -346,7 +346,10 @@ $ python naive_bayes/email_classifier
 The result of using Gaussian Naive Bayes classifier to predict the email's author:
 
 ```txt
+⏱ Training time: 1.951s
+⏱ Predicting time: 0.173s
 🤖 Accuracy: 0.9732650739476678
-⏱ Training time: 1.716s
-⏱ Predicting time: 0.184s
+
+👦 Total emails from Chris: 906
+👧 Total emails from Sarah: 852
 ```
