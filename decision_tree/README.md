@@ -1,30 +1,36 @@
-# Decision Trees
+# Decision Tree
 
-Decision Trees is a supervised learning model.
+Decision Tree is a supervised learning model.
 
 ## Table of Contents
 
-* [Decision Trees Summary](#decision-trees-summary)
+* [Decision Tree Summary](#decision-tree-summary)
 * [Entropy](#entropy)
     * [Calculating Entropy](#calculating-entropy)
     * [Information Gain](#information-gain)
         * [Information Gain on Grade Feature](#information-gain-on-grade-feature)
         * [Information Gain on Bumpiness Feature](#information-gain-on-bumpiness-feature)
         * [Information Gain on Speed Limit Feature](#information-gain-on-speed-limit-feature)
+* [Decision Tree Strengths and Weaknesses](#decistion-tree-strengths-and-weaknesses)
 * [Terrain Classifier with Decision Tree](#terrain-classifier-with-decision-tree)
     * [Create and Train a Decision Tree Classifier](#create-and-train-a-decision-tree-classifier)
     * [Run the Classifier](#run-the-classifier)
     * [Terrain Classifier Result](#terrain-classifier-result)
 * [Decision Tree Parameters](#decistion-tree-parameters)
     * [The min_samples_split Parameter](#the-min_samples_split-parameter)
+* [Email Classifier with Decision Tree](#email-classifier-with-decision-tree)
 
-## Decision Trees Summary
+## Decision Tree Summary
 
-* Decision Trees can solve the non-linear problem by using multiple linear decision boundary.
+* Decision Tree can solve the non-linear problem by using multiple linear decision boundary.
 
-![Multiple linear lines](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/slides/01_multiple_linear_lines.png)
+![Multiple linear lines](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/slides/01_multiple_linear_lines.png)
 
-![Multiple linear lines](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/slides/02_multiple_linear_lines.png)
+![Multiple linear lines](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/slides/02_multiple_linear_lines.png)
+
+* A high bias machine learning is one that practically ignores the data.
+* A high variance machine learning is one that extremely perceptive to data. It can only replicate the stuff it's seen before.
+* Tuning the trade-off between bias and variance is the art of machine learning.
 
 ## Entropy
 
@@ -37,7 +43,7 @@ Decision Trees is a supervised learning model.
 
 Suppose we have three feature: `grade`, `bumpiness`, and `speed_limit`. And the labels is the `speed`. Let's find the entropy of the labels (parent entropy).
 
-![Calculating Entropy](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/slides/04_calculating_entropy.png)
+![Calculating Entropy](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/slides/04_calculating_entropy.png)
 
 ```txt
 labels: ssff
@@ -68,7 +74,7 @@ Information Gain = Entropy of Parent - weighted average of its children entropy
 
 Let's find the information gain if we split the data on the `grade` feature.
 
-![Calculating children entropy for grade feature](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/slides/05_entropy_for_grade_feature.png)
+![Calculating children entropy for grade feature](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/slides/05_entropy_for_grade_feature.png)
 
 ```txt
 Speed labels based on the grade:
@@ -149,6 +155,12 @@ Information Gain = Parent Entropy - Children Entropy
 
 From calculation above, we now that by splitting the data on `speed_limit` feature, we'll have the biggest information gain.
 
+## Decision Tree Strengths and Weaknesses
+
+* It's easy to understand and to use.
+* We can build a bigger classifier with decision tree, like ensemble method.
+* It prones to overfitting especially when we have a lots of features.
+
 ## Terrain Classifier with Decision Tree
 
 ### Create and Train a Decision Tree Classifier
@@ -175,7 +187,7 @@ Type the following command on your terminal to run the terrain classifier:
 $ cd /path/to/intro-to-machine-learning
 
 # And run it with Python
-$ python decision_trees/terrain_classifier
+$ python decision_tree/terrain_classifier
 ```
 
 ### Terrain Classifier Result
@@ -186,7 +198,7 @@ The result from using the Decision Tree classifier to predict the vehicle's spee
 🤖 Accuracy: 0.908
 ```
 
-![Decision Trees decision boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/terrain_classifier/plot.png)
+![Decision Tree decision boundary](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/terrain_classifier/plot.png)
 
 ## Decision Tree Parameters
 
@@ -198,11 +210,11 @@ The `min_samples_split` is the minimum number of samples required to split the n
 
 If the `min_samples_split = 2`, the branches will split until it only leave us with `1` node (leaf) at the end of the branch.
 
-![Minimum samples split](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/terrain_classifier/plot.png)
+![Minimum samples split](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/terrain_classifier/plot.png)
 
 Decision tree with `min_samples_split = 2`:
 
-![Decision Tree min_samples_split2](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/terrain_classifier/min_samples_split2.png)
+![Decision Tree min_samples_split2](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/terrain_classifier/min_samples_split2.png)
 
 ```txt
 min_samples_split = 2 (default)
@@ -212,10 +224,49 @@ min_samples_split = 2 (default)
 
 Decision tree with `min_samples_split = 50`:
 
-![Decision Tree min_samples_split2](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_trees/terrain_classifier/min_samples_split50.png)
+![Decision Tree min_samples_split2](https://raw.githubusercontent.com/risan/intro-to-machine-learning/master/decision_tree/terrain_classifier/min_samples_split50.png)
 
 ```txt
 min_samples_split = 50
 
 🤖 Accuracy: 0.912
 ```
+
+## Email Classifier with Decision Tree
+
+Type the following command on your terminal to run the email classifier:
+
+```shell
+# Go to the project directory.
+$ cd /path/to/intro-to-machine-learning
+
+# And run it with Python
+$ python decision_tree/email_classifier
+```
+
+The result of using Decision Tree classifier with `min_samples_split = 40`:
+
+```txt
+# min_samples_split = 40
+⏱ Training time: 76.246s
+⏱ Predicting time: 0.043s
+🤖 Accuracy: 0.9772468714448237
+
+👦 Total emails from Chris: 867
+👧 Total emails from Sarah: 891
+```
+
+The above results is from using 3,785 features (10% from all available features). Let's decrease the number of feature to 1% (379 features) to speed up the training.
+
+```txt
+# min_samples_split = 40
+# features percentile = 1% (379)
+⏱ Training time: 4.713s
+⏱ Predicting time: 0.002s
+🤖 Accuracy: 0.9670079635949943
+
+👦 Total emails from Chris: 887
+👧 Total emails from Sarah: 871
+```
+
+Decreasing the number of features to 1% drastically speeding up our training and predicting process. The accuracy is only drop 0.01, awesome!
