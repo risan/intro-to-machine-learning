@@ -21,6 +21,9 @@ I rarely use Python before. Here are new things I've discovered on Python while 
     * [Pair Values from Two Lists](#pair-values-from-two-lists)
     * [Splitting a List](#splitting-a-list)
     * [Filtering List In One Line](#filtering-list-in-one-line)
+* [Working with Dictionary](#working-with-dictionary)
+    * [Loop Through Dictionary](#loop-through-dictionary)
+    * [Calculate Total of Particular Dictionary Key](#calculate-total-of-particular-dictionary-key)
 
 ## Modules Classes and Functions
 
@@ -247,4 +250,30 @@ numbers = range(1,11)
 # Filter even numbers only.
 [numbers[i] for i in range(0, len(numbers)) if numbers[i] % 2 == 0]
 # [2, 4, 6, 8, 10]
+```
+
+## Working with Dictionary
+
+### Loop Through Dictionary
+
+We can use the `itervalues` method to loop through a dictionary:
+
+```py
+for person in people.itervalues():
+    print(person["email_address"])
+```
+
+You can also use the `iteritems` if you want to access the key too:
+
+```py
+for person in people.iteritems():
+    print(person[0] + ": " + person[1]["email_address"])
+```
+
+### Calculate Total of Particular Dictionary Key
+
+Suppose we want to calculate the total of `sallary` key on a `people` dictionary:
+
+```py
+total_salary = sum([person["salary"] for person in people.itervalues()])
 ```
