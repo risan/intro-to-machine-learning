@@ -3,12 +3,12 @@ from sklearn.metrics import accuracy_score
 from email_pre_processor import pre_process_email
 from timer import Timer
 
-def run_email_classifier(classifier, title = None, training_data_proportion = 1):
+def run_email_classifier(classifier, title = None, training_data_proportion = 1, features_percentile = 10):
     # Print the title if any.
     if title: print(title)
 
     # Get the email data.
-    features_train, features_test, labels_train, labels_test = pre_process_email()
+    features_train, features_test, labels_train, labels_test = pre_process_email(features_percentile = features_percentile)
 
     # Cut down the training data.
     if training_data_proportion < 1:

@@ -170,7 +170,7 @@ The `email_classifier_runner.py` is module that we can use to run the classifier
 ```py
 from email_classifier_runner import run_email_classifier
 
-run_email_classifier(classifier, [title = None], [training_data_proportion = 1])
+run_email_classifier(classifier, [title = None], [training_data_proportion = 1], [features_percentile = 10])
 ```
 
 **Parameters:**
@@ -178,6 +178,7 @@ run_email_classifier(classifier, [title = None], [training_data_proportion = 1])
 * `classifier`: This is the classifier object that you want to run.
 * `title`: This is the optional text that you want to print before running the classifier.
 * `training_data_proportion`: The proportion of training data to use, default to `1`. Note that this is not the proportion of training data againsts the testing data. But simply the proportion of testing data that will be feed to the classifier. Use the value `< 1` to drop some of the testing data thus speeding up the training and predicting processes.
+* `features_percentile`: The percentage of important features to select based on its score (default to 10).
 
 Usage example:
 
@@ -204,13 +205,14 @@ The `email_pre_processor.py` is used to split the emails data for training and t
 ```py
 from email_pre_processor import pre_process_email
 
-features_train, features_test, labels_train, labels_test = pre_process_email([texts_file = "/path/to/data/email/texts.pkl", author_text = "/path/to/data/email/authors.pkl"])
+features_train, features_test, labels_train, labels_test = pre_process_email([texts_file = "/path/to/data/email/texts.pkl"], [author_text = "/path/to/data/email/authors.pkl"], [features_percentile = 10])
 ```
 
 It accepts two optional parameters:
 
 - `texts_file`: The path to file that holds the serialized list of email texts. It defaults to the absolute path of `/email/texts.pkl` file in `data` directory.
 - `authors_file`: The path to file that holds the serialized list of authors texts. It defaults to the absolute path of `/email/authors.pkl` file in `data` directory.
+* `features_percentile`: The percentage of important features based on its score.
 
 ### Timer
 

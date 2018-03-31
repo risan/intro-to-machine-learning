@@ -17,7 +17,7 @@ def data_path(path):
 
     return os.path.join(data_dir, path)
 
-def pre_process_email(texts_file = data_path("email/texts.pkl"), authors_file = data_path("email/authors.pkl")):
+def pre_process_email(texts_file = data_path("email/texts.pkl"), authors_file = data_path("email/authors.pkl"), features_percentile = 10):
     """Pre-process the emails data.
 
     The texts_file contains the list of email texts and the authors_file
@@ -51,7 +51,7 @@ def pre_process_email(texts_file = data_path("email/texts.pkl"), authors_file = 
 
     # Since text can have a lot of features, it can be slow to compute.
     # Select only 10% of the features with the highest score.
-    selector = SelectPercentile(f_classif, percentile = 10)
+    selector = SelectPercentile(f_classif, percentile = features_percentile)
     selector.fit(features_train_transformed, labels_train)
     selected_features_train_transformed = selector.transform(features_train_transformed).toarray()
     selected_features_test_transformed = selector.transform(features_test_transformed).toarray()
