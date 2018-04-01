@@ -8,7 +8,9 @@ I rarely use Python before. Here are new things I've discovered on Python while 
     * [Import Python Module Dynamically](#import-python-module-dynamically)
     * [Multiple Returns in Python](#multiple-returns-in-python)
     * [Importing Modules Outside of the Directory](importing-modules-outside-of-the-directory)
-* [Print The Emojis](#print-the-emojis)
+* [Output](#output)
+    * [Print The Emojis](#print-the-emojis)
+    * [Pretty Print](#pretty-print)
 * [Working with Pathname](#working-with-pathname)
     * [Get Filename From URL](#get-filename-from-url)
     * [Check if File Exists](#check-if-file-exists)
@@ -21,6 +23,9 @@ I rarely use Python before. Here are new things I've discovered on Python while 
     * [Pair Values from Two Lists](#pair-values-from-two-lists)
     * [Splitting a List](#splitting-a-list)
     * [Filtering List In One Line](#filtering-list-in-one-line)
+    * [Sort List in Ascending Order](#sort-list-in-ascending-order)
+    * [Using Filter with List](#using-filter-with-list)
+    * [Using Reduce with List of Dictionary](#using-reduce-with-list-of-dictionary)
 * [Working with Dictionary](#working-with-dictionary)
     * [Loop Through Dictionary](#loop-through-dictionary)
     * [Calculate Total of Particular Dictionary Key](#calculate-total-of-particular-dictionary-key)
@@ -110,7 +115,9 @@ sys.path.append(tools_path)
 import speak_yoda
 ```
 
-## Print The Emojis
+## Output
+
+### Print The Emojis
 
 To print the emojis or any other unicode characters in Python, we have to declare the encoding type at the top like this:
 
@@ -118,6 +125,17 @@ To print the emojis or any other unicode characters in Python, we have to declar
 # coding: utf8
 
 print("😅")
+```
+
+### Pretty Print
+
+Print Python data structure nicely with configurable indentation:
+
+```py
+import pprint
+pp = pprint.PrettyPrinter(indent=2)
+
+pp.pprint(people)
 ```
 
 ## Working with Pathname
@@ -250,6 +268,62 @@ numbers = range(1,11)
 # Filter even numbers only.
 [numbers[i] for i in range(0, len(numbers)) if numbers[i] % 2 == 0]
 # [2, 4, 6, 8, 10]
+```
+
+### Sort List in Ascending Order
+
+We can sort a list in ascending order by calling the `sort` method.
+
+```py
+people = ["John", "Alice", "Poe"]
+people.sort()
+print(people) # ["Alice", "John", "Poe"]
+```
+
+### Using Filter with List
+
+Just like its name, we can use `filter` to filter our list:
+
+```py
+numbers = range(1, 11)
+
+even_numbers = filter(lambda number: number % 2 == 0, numbers)
+# [2, 4, 6, 8, 10]
+```
+
+We can break the above statement into two parts:
+
+- `lambda number: statement`: `number` is the variable name we'd like to use to refrence a single item from the `numbers` list. The following statement must evaluate to truthy/falsy value—falsy means the current item will be removed from the final result.
+- `numbers`: The second parameter is the list we'd like to filter.
+
+### Using Reduce with List of Dictionary
+
+We can use the `reduce` function to find the total of particular key in a list of dictionary:
+
+```py
+items = [{value:10}, {value:20}, {value:50}]
+
+# Find the total of value key.
+totalValues = reduce(lambda total, item: total + item["value"], items, 0) # 80
+```
+
+It can be broken down into 4 parts:
+- `lambda total`: It's the carried/accumulative value that will finally be returned.
+- `item: statement`: `item` is the name of variable we'd like to use to reference the single item from the `items` list. The statement to execute in order to define the accumulative value for the next iteration.
+- `items`: It's the list of item that we would like to "reduce"
+- `0`: The last parameter is optional, it's the initial accumulative value for the first iteration.
+
+We can also use `reduce` function to find a single item from the list. Here's an example to find the person with the biggest `total_payments` within the given list of people dictionary.
+
+```py
+people = [
+    {"name": "John", "total_payments": 100},
+    {"name": "Alice", "total_payments": 1000},
+    {"name": "Poe", "total_payments": 800}
+]
+
+person_biggest_total_payments = reduce(lambda paid_most, person: person if person["total_payments"] > paid_most["total_payments"] else paid_most, people, { "total_payments": 0 })
+# {'name': 'Alice', 'total_payments': 1000}
 ```
 
 ## Working with Dictionary
