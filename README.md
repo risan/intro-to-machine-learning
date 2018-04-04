@@ -55,6 +55,7 @@ The startup script will also check for all of the required modules. The Enron da
 * [Decision Tree](https://github.com/risan/intro-to-machine-learning/tree/master/decision_tree#readme)
 * [Choose Your Own Algorithm](https://github.com/risan/intro-to-machine-learning/tree/master/choose_your_own_algorithm#readme)
 * [Datasets and Questions](https://github.com/risan/intro-to-machine-learning/tree/master/datasets_and_questions#readme)
+* [Regression](https://github.com/risan/intro-to-machine-learning/tree/master/regression#readme)
 
 ## New Things I Learned
 
